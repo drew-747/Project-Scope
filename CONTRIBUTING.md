@@ -161,22 +161,6 @@ The project is organized into several workspaces:
    - Cryptographic implementation verification
    - Side-channel attack testing
 
-## Reporting Security Issues
-
-For security vulnerabilities, please follow our security disclosure process:
-1. Do not disclose the vulnerability publicly
-2. Email security@securechat.example.com
-3. Include detailed technical description
-4. Provide proof of concept if possible
-5. Wait for security team response
-
-## Technical Resources
-
-- [Signal Protocol Documentation](https://signal.org/docs/)
-- [X3DH Protocol Specification](https://signal.org/docs/specifications/x3dh/)
-- [Double Ratchet Algorithm](https://signal.org/docs/specifications/doubleratchet/)
-- [ChaCha20-Poly1305 RFC](https://tools.ietf.org/html/rfc8439)
-
 ## Questions?
 
 For technical questions about the cryptographic implementation, open an issue with the `crypto` label. 
