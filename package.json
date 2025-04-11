@@ -1,0 +1,48 @@
+{
+  "name": "securechat",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "mobile",
+    "desktop",
+    "shared"
+  ],
+  "scripts": {
+    "setup": "npm run setup:shared && npm run setup:mobile && npm run setup:desktop",
+    "setup:shared": "cd shared && npm install",
+    "setup:mobile": "cd mobile && npm install",
+    "setup:desktop": "cd desktop && npm install",
+    "dev:mobile": "cd mobile && npm run start",
+    "dev:desktop": "cd desktop && npm run dev",
+    "dev:server": "cd server && go run cmd/main.go",
+    "build": "npm run build:shared && npm run build:mobile && npm run build:desktop",
+    "build:shared": "cd shared && npm run build",
+    "build:mobile": "cd mobile && npm run build",
+    "build:desktop": "cd desktop && npm run build",
+    "test": "npm run test:shared && npm run test:mobile && npm run test:desktop",
+    "test:shared": "cd shared && npm test",
+    "test:mobile": "cd mobile && npm test",
+    "test:desktop": "cd desktop && npm test",
+    "lint": "npm run lint:shared && npm run lint:mobile && npm run lint:desktop",
+    "lint:shared": "cd shared && npm run lint",
+    "lint:mobile": "cd mobile && npm run lint",
+    "lint:desktop": "cd desktop && npm run lint"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@stablelib/chacha20poly1305": "^2.0.1",
+    "@stablelib/hkdf": "^2.0.1",
+    "@stablelib/random": "^2.0.1",
+    "@stablelib/sha256": "^2.0.1",
+    "react-native-safe-area-context": "^5.3.0",
+    "tweetnacl": "^1.0.3"
+  }
+}
