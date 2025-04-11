@@ -2,14 +2,19 @@ import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import Store from 'electron-store';
 
-const store = new Store();
-
 interface WindowState {
   width: number;
   height: number;
   x?: number;
   y?: number;
 }
+
+interface StoreSchema {
+  windowState: WindowState;
+  [key: string]: any;
+}
+
+const store = new Store<StoreSchema>();
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
